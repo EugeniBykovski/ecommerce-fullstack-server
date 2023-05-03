@@ -21,10 +21,16 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/sequelize": "^9.0.2",
+    "mysql2": "^3.2.4",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "sequelize": "^6.31.1",
+    "sequelize-cli": "^6.6.0",
+    "sequelize-typescript": "^2.1.5"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
