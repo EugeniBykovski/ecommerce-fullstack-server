@@ -35,7 +35,7 @@ export class BoilerPartsService {
     });
   }
 
-  async findOne(id: number): Promise<BoilerParts> {
+  async findOne(id: number | string): Promise<BoilerParts> {
     return this.boilerPartsModel.findOne({
       where: { id },
     });
@@ -47,7 +47,7 @@ export class BoilerPartsService {
     });
   }
 
-  async findOneByString(
+  async searchByString(
     str: string,
   ): Promise<{ count: number; rows: BoilerParts[] }> {
     return this.boilerPartsModel.findAndCountAll({
