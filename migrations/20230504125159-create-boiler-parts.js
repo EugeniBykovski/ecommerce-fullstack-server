@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.STRING(2048),
       },
       images: {
-        type: Sequelize.STRING(2048),
+        type: Sequelize.STRING(512),
       },
       in_stock: {
         type: Sequelize.STRING,

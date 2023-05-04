@@ -47,7 +47,7 @@ module.exports = {
         images: JSON.stringify(
           [...Array(7)].map(
             () =>
-              `${faker.image.technics()}?random=${faker.random.numeric(30)}`,
+              `${faker.image.technics()}?random=${faker.random.numeric(10)}`,
           ),
         ),
         vendor_code: faker.internet.password(),
