@@ -9,12 +9,6 @@ import { User } from 'src/users/users.model';
 import * as bcrypt from 'bcrypt';
 import * as request from 'supertest';
 
-const mockedUser = {
-  username: 'Jhon',
-  email: 'jhon@gmail.com',
-  password: 'jhon123',
-};
-
 describe('Users Controller', () => {
   let app: INestApplication;
 
@@ -36,19 +30,7 @@ describe('Users Controller', () => {
     await app.init();
   });
 
-  beforeEach(async () => {
-    const user = new User();
-    const hashedPassword = await bcrypt.hash(mockedUser.password, 10);
-
-    user.username = mockedUser.username;
-    user.password = hashedPassword;
-    user.email = mockedUser.email;
-
-    return user.save();
-  });
-
   afterEach(async () => {
-    await User.destroy({ where: { username: mockedUser.username } });
     await User.destroy({ where: { username: 'Test' } });
   });
 

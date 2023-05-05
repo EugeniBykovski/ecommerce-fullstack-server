@@ -9,7 +9,7 @@ import { User } from 'src/users/users.model';
 import * as bcrypt from 'bcrypt';
 import { UsersService } from 'src/users/users.service';
 
-describe('Users Controller', () => {
+describe('Users Service', () => {
   let app: INestApplication;
   let usersService: UsersService;
 
